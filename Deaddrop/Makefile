@@ -83,7 +83,7 @@ ROOT_DIR			:=	$(HOME_DIR)/$(TARGET)
 GITURL				:=	https://github.com/coverclock/com-diag-$(PROJECT).git
 
 GENERATED			:=	vintage generate setup
-TEMPLATES			:=	$(PROJECT)_release.c $(PROJECT)_vintage.c $(PROJECT)_revision.c
+PROVIDENCED			:=	$(PROJECT)_release.c $(PROJECT)_vintage.c $(PROJECT)_revision.c
 SYNTHESIZED			:=	$(PROJECT)_release.h $(PROJECT)_vintage.h $(PROJECT)_revision.h
 
 ALIASES				:=	
@@ -156,8 +156,8 @@ TARGETBINARIES		:=	$(addprefix $(OUT)/,$(basename $(wildcard $(BIN_DIR)/*.c)))
 TARGETFUNCTIONALS	:=	$(addprefix $(OUT)/,$(basename $(wildcard $(FUN_DIR)/*.c)))
 TARGETFUNCTIONALS	+=	$(addprefix $(OUT)/,$(basename $(wildcard $(FUN_DIR)/*.sh)))
 TARGETGENERATED		:=	$(addprefix $(OUT)/$(BIN_DIR)/,$(GENERATED)) $(addprefix $(OUT)/$(SYM_DIR)/,$(GENERATED))
-TARGETTEMPLATES		:=	$(addprefix $(OUT)/$(SRC_DIR)/,$(TEMPLATES))
 TARGETOBJECTS		:=	$(addprefix $(OUT)/$(OBC_DIR)/,$(addsuffix .o,$(basename $(wildcard $(SRC_DIR)/*.c))))
+TARGETPROVIDENCED	:=	$(addprefix $(OUT)/$(OBC_DIR)/$(SRC_DIR)/,$(addsuffix .o,$(basename $(PROVIDENCED))))
 TARGETSCRIPTS		:=	$(addprefix $(OUT)/,$(basename $(wildcard $(BIN_DIR)/*.sh)))
 TARGETSCRIPTS		+=	$(addprefix $(OUT)/,$(wildcard $(BIN_DIR)/*.awk))
 TARGETSYNTHESIZED	:=	$(addprefix $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/,$(SYNTHESIZED))
@@ -260,14 +260,14 @@ backup:
 
 ########## Target C Libraries
 
-$(OUT)/$(ARC_DIR)/$(PROJECT_A):	$(TARGETOBJECTS)
+$(OUT)/$(ARC_DIR)/$(PROJECT_A):	$(TARGETOBJECTS) $(TARGETPROVIDENCED)
 	D=`dirname $@`; mkdir -p $$D
 	$(AR) $(ARFLAGS) $@ $^
 	$(RANLIB) $@
 
-$(OUT)/$(LIB_DIR)/lib$(PROJECT).$(SO).$(MAJOR).$(MINOR):	$(TARGETOBJECTS)
+$(OUT)/$(LIB_DIR)/lib$(PROJECT).$(SO).$(MAJOR).$(MINOR):	$(TARGETOBJECTS) $(TARGETPROVIDENCED)
 	D=`dirname $@`; mkdir -p $$D
-	$(CC) $(CPPFLAGS) $(CFLAGS) $(A2SOARCH) -o $@ $(SOFLAGS) $(TARGETOBJECTS)
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(A2SOARCH) -o $@ $(SOFLAGS) $(TARGETOBJECTS) $(TARGETPROVIDENCED)
 
 $(OUT)/$(LIB_DIR)/lib$(PROJECT).$(SO).$(MAJOR):	$(OUT)/$(LIB_DIR)/lib$(PROJECT).$(SO).$(MAJOR).$(MINOR)
 	D=`dirname $<`; F=`basename $<`; T=`basename $@`; ( cd $$D; ln -s -f $$F $$T ) 
@@ -447,26 +447,14 @@ $(OUT)/$(GEN_DIR)/vintage.c:	Makefile $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PR
 
 endif
 
+$(OUT)/$(OBC_DIR)/$(SRC_DIR)/$(PROJECT)_release.o:	$(OUT)/$(SRC_DIR)/$(PROJECT)_release.c
+
 $(OUT)/$(SRC_DIR)/$(PROJECT)_release.c:	Makefile $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_release.h
 	D=`dirname $@`; mkdir -p $$D
 	echo '/* GENERATED FILE! DO NOT EDIT! */' > $@
 	echo '#include "com/diag/$(PROJECT)/$(PROJECT)_release.h"' >> $@
 	echo 'const char COM_DIAG_$(SYMBOL)_RELEASE_KEYWORD[] = "COM_DIAG_$(SYMBOL)_RELEASE=" COM_DIAG_$(SYMBOL)_RELEASE;' >> $@
 	echo 'const char * COM_DIAG_$(SYMBOL)_RELEASE_VALUE = &COM_DIAG_$(SYMBOL)_RELEASE_KEYWORD[sizeof("COM_DIAG_$(SYMBOL)_RELEASE=") - 1];' >> $@
-
-$(OUT)/$(SRC_DIR)/$(PROJECT)_revision.c:	Makefile $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_revision.h
-	D=`dirname $@`; mkdir -p $$D
-	echo '/* GENERATED FILE! DO NOT EDIT! */' > $@
-	echo '#include "com/diag/$(PROJECT)/$(PROJECT)_revision.h"' >> $@
-	echo 'const char COM_DIAG_$(SYMBOL)_REVISION_KEYWORD[] = "COM_DIAG_$(SYMBOL)_REVISION=" COM_DIAG_$(SYMBOL)_REVISION;' >> $@
-	echo 'const char * COM_DIAG_$(SYMBOL)_REVISION_VALUE = &COM_DIAG_$(SYMBOL)_REVISION_KEYWORD[sizeof("COM_DIAG_$(SYMBOL)_REVISION=") - 1];' >> $@
-
-$(OUT)/$(SRC_DIR)/$(PROJECT)_vintage.c:	Makefile $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_vintage.h
-	D=`dirname $@`; mkdir -p $$D
-	echo '/* GENERATED FILE! DO NOT EDIT! */' > $@
-	echo '#include "com/diag/$(PROJECT)/$(PROJECT)_vintage.h"' >> $@
-	echo 'const char COM_DIAG_$(SYMBOL)_VINTAGE_KEYWORD[] = "COM_DIAG_$(SYMBOL)_VINTAGE=" COM_DIAG_$(SYMBOL)_VINTAGE;' >> $@
-	echo 'const char * COM_DIAG_$(SYMBOL)_VINTAGE_VALUE = &COM_DIAG_$(SYMBOL)_VINTAGE_KEYWORD[sizeof("COM_DIAG_$(SYMBOL)_VINTAGE=") - 1];' >> $@
 
 $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_release.h:	Makefile
 	D=`dirname $@`; mkdir -p $$D
@@ -479,17 +467,14 @@ $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_release.h:	Makefile
 	echo '#define COM_DIAG_$(SYMBOL)_RELEASE "$(MAJOR).$(MINOR).$(BUILD)"' >> $@
 	echo '#endif' >> $@
 
-$(OUT)/$(OBC_DIR)/$(SRC_DIR)/$(PROJECT)_release.o:	$(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_release.h
+$(OUT)/$(OBC_DIR)/$(SRC_DIR)/$(PROJECT)_revision.o:	$(OUT)/$(SRC_DIR)/$(PROJECT)_revision.c
 
-$(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_vintage.h:	Makefile
+$(OUT)/$(SRC_DIR)/$(PROJECT)_revision.c:	Makefile $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_revision.h
 	D=`dirname $@`; mkdir -p $$D
 	echo '/* GENERATED FILE! DO NOT EDIT! */' > $@
-	echo '#ifndef _H_COM_DIAG_$(SYMBOL)_VINTAGE_' >> $@
-	echo '#define _H_COM_DIAG_$(SYMBOL)_VINTAGE_' >> $@
-	echo '#define COM_DIAG_$(SYMBOL)_VINTAGE "$(VINTAGE)"' >> $@
-	echo '#endif' >> $@
-
-$(OUT)/$(OBC_DIR)/$(SRC_DIR)/$(PROJECT)_vintage.o:	$(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_vintage.h
+	echo '#include "com/diag/$(PROJECT)/$(PROJECT)_revision.h"' >> $@
+	echo 'const char COM_DIAG_$(SYMBOL)_REVISION_KEYWORD[] = "COM_DIAG_$(SYMBOL)_REVISION=" COM_DIAG_$(SYMBOL)_REVISION;' >> $@
+	echo 'const char * COM_DIAG_$(SYMBOL)_REVISION_VALUE = &COM_DIAG_$(SYMBOL)_REVISION_KEYWORD[sizeof("COM_DIAG_$(SYMBOL)_REVISION=") - 1];' >> $@
 
 $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_revision.h:	Makefile
 	D=`dirname $@`; mkdir -p $$D
@@ -499,7 +484,22 @@ $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_revision.h:	Makefile
 	echo '#define COM_DIAG_$(SYMBOL)_REVISION "$(REVISION)"' >> $@
 	echo '#endif' >> $@
 
-$(OUT)/$(OBC_DIR)/$(SRC_DIR)/$(PROJECT)_revision.o:	$(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_revision.h
+$(OUT)/$(OBC_DIR)/$(SRC_DIR)/$(PROJECT)_vintage.o:	$(OUT)/$(SRC_DIR)/$(PROJECT)_vintage.c
+
+$(OUT)/$(SRC_DIR)/$(PROJECT)_vintage.c:	Makefile $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_vintage.h
+	D=`dirname $@`; mkdir -p $$D
+	echo '/* GENERATED FILE! DO NOT EDIT! */' > $@
+	echo '#include "com/diag/$(PROJECT)/$(PROJECT)_vintage.h"' >> $@
+	echo 'const char COM_DIAG_$(SYMBOL)_VINTAGE_KEYWORD[] = "COM_DIAG_$(SYMBOL)_VINTAGE=" COM_DIAG_$(SYMBOL)_VINTAGE;' >> $@
+	echo 'const char * COM_DIAG_$(SYMBOL)_VINTAGE_VALUE = &COM_DIAG_$(SYMBOL)_VINTAGE_KEYWORD[sizeof("COM_DIAG_$(SYMBOL)_VINTAGE=") - 1];' >> $@
+
+$(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_vintage.h:	Makefile
+	D=`dirname $@`; mkdir -p $$D
+	echo '/* GENERATED FILE! DO NOT EDIT! */' > $@
+	echo '#ifndef _H_COM_DIAG_$(SYMBOL)_VINTAGE_' >> $@
+	echo '#define _H_COM_DIAG_$(SYMBOL)_VINTAGE_' >> $@
+	echo '#define COM_DIAG_$(SYMBOL)_VINTAGE "$(VINTAGE)"' >> $@
+	echo '#endif' >> $@
 
 $(OUT)/$(SYM_DIR)/vintage:	$(OUT)/$(GEN_DIR)/vintage.c $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_release.h $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_vintage.h $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_revision.h
 	D=`dirname $@`; mkdir -p $$D
