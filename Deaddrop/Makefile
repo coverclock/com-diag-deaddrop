@@ -60,7 +60,7 @@ OUT_DIR				:=	out# Build artifacts
 ARC_DIR				:=	arc# Archive files for static linking
 DEP_DIR				:=	dep# Generated dependencies and other make files
 DOC_DIR				:=	doc# Documentation
-GEN_DIR				:=	gen# Generated source files
+GEN_DIR				:=	gen# Generated utility source files
 LIB_DIR				:=	lib# Shared objects for dynamic linking
 MOD_DIR				:=	mod# Loadable user modules
 OBC_DIR				:=	obc# C object modules
@@ -156,9 +156,8 @@ TARGETBINARIES		:=	$(addprefix $(OUT)/,$(basename $(wildcard $(BIN_DIR)/*.c)))
 TARGETFUNCTIONALS	:=	$(addprefix $(OUT)/,$(basename $(wildcard $(FUN_DIR)/*.c)))
 TARGETFUNCTIONALS	+=	$(addprefix $(OUT)/,$(basename $(wildcard $(FUN_DIR)/*.sh)))
 TARGETGENERATED		:=	$(addprefix $(OUT)/$(BIN_DIR)/,$(GENERATED)) $(addprefix $(OUT)/$(SYM_DIR)/,$(GENERATED))
-TARGETOBJECTS		:=	$(addprefix $(OUT)/$(OBC_DIR)/,$(addsuffix .o,$(basename $(wildcard $(SRC_DIR)/*.c))))
-TARGETPROVIDENCED	:=	$(addprefix $(OUT)/$(OBC_DIR)/$(SRC_DIR)/,$(addsuffix .o,$(basename $(PROVIDENCED))))
-TARGETSCRIPTS		:=	$(addprefix $(OUT)/,$(basename $(wildcard $(BIN_DIR)/*.sh)))
+TARGETOBJECTS		:=	$(addprefix $(OUT)/$(OBC_DIR)/,$(addsuffix .o,$(basename $(wildcard $(SRC_DIR)/*.c)))) $(addprefix $(OUT)/$(OBC_DIR)/$(SRC_DIR)/,$(addsuffix .o,$(basename $(PROVIDENCED))))
+ARGETSCRIPTS		:=	$(addprefix $(OUT)/,$(basename $(wildcard $(BIN_DIR)/*.sh)))
 TARGETSCRIPTS		+=	$(addprefix $(OUT)/,$(wildcard $(BIN_DIR)/*.awk))
 TARGETSYNTHESIZED	:=	$(addprefix $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/,$(SYNTHESIZED))
 TARGETUNITTESTS		:=	$(addprefix $(OUT)/,$(basename $(wildcard $(TST_DIR)/*.c)))
@@ -260,14 +259,14 @@ backup:
 
 ########## Target C Libraries
 
-$(OUT)/$(ARC_DIR)/$(PROJECT_A):	$(TARGETOBJECTS) $(TARGETPROVIDENCED)
+$(OUT)/$(ARC_DIR)/$(PROJECT_A):	$(TARGETOBJECTS)
 	D=`dirname $@`; mkdir -p $$D
 	$(AR) $(ARFLAGS) $@ $^
 	$(RANLIB) $@
 
-$(OUT)/$(LIB_DIR)/lib$(PROJECT).$(SO).$(MAJOR).$(MINOR):	$(TARGETOBJECTS) $(TARGETPROVIDENCED)
+$(OUT)/$(LIB_DIR)/lib$(PROJECT).$(SO).$(MAJOR).$(MINOR):	$(TARGETOBJECTS)
 	D=`dirname $@`; mkdir -p $$D
-	$(CC) $(CPPFLAGS) $(CFLAGS) $(A2SOARCH) -o $@ $(SOFLAGS) $(TARGETOBJECTS) $(TARGETPROVIDENCED)
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(A2SOARCH) -o $@ $(SOFLAGS) $(TARGETOBJECTS)
 
 $(OUT)/$(LIB_DIR)/lib$(PROJECT).$(SO).$(MAJOR):	$(OUT)/$(LIB_DIR)/lib$(PROJECT).$(SO).$(MAJOR).$(MINOR)
 	D=`dirname $<`; F=`basename $<`; T=`basename $@`; ( cd $$D; ln -s -f $$F $$T ) 
@@ -448,6 +447,8 @@ $(OUT)/$(GEN_DIR)/vintage.c:	Makefile $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PR
 endif
 
 $(OUT)/$(OBC_DIR)/$(SRC_DIR)/$(PROJECT)_release.o:	$(OUT)/$(SRC_DIR)/$(PROJECT)_release.c
+	D=`dirname $@`; mkdir -p $$D
+	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ -c $<
 
 $(OUT)/$(SRC_DIR)/$(PROJECT)_release.c:	Makefile $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_release.h
 	D=`dirname $@`; mkdir -p $$D
@@ -468,6 +469,8 @@ $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_release.h:	Makefile
 	echo '#endif' >> $@
 
 $(OUT)/$(OBC_DIR)/$(SRC_DIR)/$(PROJECT)_revision.o:	$(OUT)/$(SRC_DIR)/$(PROJECT)_revision.c
+	D=`dirname $@`; mkdir -p $$D
+	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ -c $<
 
 $(OUT)/$(SRC_DIR)/$(PROJECT)_revision.c:	Makefile $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_revision.h
 	D=`dirname $@`; mkdir -p $$D
@@ -485,6 +488,8 @@ $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_revision.h:	Makefile
 	echo '#endif' >> $@
 
 $(OUT)/$(OBC_DIR)/$(SRC_DIR)/$(PROJECT)_vintage.o:	$(OUT)/$(SRC_DIR)/$(PROJECT)_vintage.c
+	D=`dirname $@`; mkdir -p $$D
+	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ -c $<
 
 $(OUT)/$(SRC_DIR)/$(PROJECT)_vintage.c:	Makefile $(OUT)/$(INC_DIR)/com/diag/$(PROJECT)/$(PROJECT)_vintage.h
 	D=`dirname $@`; mkdir -p $$D
