@@ -124,6 +124,20 @@ DIMINUTO_LIBRARIES	:=	$(DIMINUTO_ROOT)/$(OUT)/$(LIB_DIR)
 DIMINUTO_CPPFLAGS	:=	-iquote $(DIMINUTO_HEADERS)
 DIMINUTO_LDFLAGS	:=	-L$(DIMINUTO_LIBRARIES) -l$(DIMINUTO_PROJECT) -lpthread -lrt -ldl
 
+########## Quant Configuration
+
+QUANT_TITLE		:=	Quant
+
+QUANT_PROJECT	:=	$(shell echo $(QUANT_TITLE) | tr '[A-Z]' '[a-z]')
+QUANT_SYMBOL	:=	$(shell echo $(QUANT_TITLE) | tr '[a-z]' '[A-Z]')
+
+QUANT_ROOT		:=	$(THERE)/quant
+QUANT_HEADERS	:=	$(QUANT_ROOT)/lib/include#/quant
+QUANT_LIBRARIES	:=	$(QUANT_ROOT)/Debug/lib
+
+QUANT_CPPFLAGS	:=	-iquote $(QUANT_HEADERS)
+QUANT_LDFLAGS	:=	-L$(QUANT_LIBRARIES) -l$(QUANT_PROJECT)
+
 ########## Commands and Option Flags
 
 PROJECT_A			:=	lib$(PROJECT).a
@@ -139,11 +153,11 @@ STRIP				:=	$(CROSS_COMPILE)strip
 CDEFINES			:=
 
 ARFLAGS				:=	crsv
-CPPFLAGS			:=	$(CDEFINES) -iquote $(SRC_DIR) -iquote $(INC_DIR) -iquote $(OUT)/$(INC_DIR) $(DIMINUTO_CPPFLAGS) $(CPPARCH)
+CPPFLAGS			:=	$(CDEFINES) -iquote $(SRC_DIR) -iquote $(INC_DIR) -iquote $(OUT)/$(INC_DIR) $(DIMINUTO_CPPFLAGS) $(QUANT_CPPFLAGS) $(CPPARCH)
 CFLAGS				:=	$(CARCH) -g
 CPFLAGS				:=	-i
 MVFLAGS				:=	-i
-LDFLAGS				:=	$(LDARCH) -l$(PROJECT) $(LDLIBRARIES) $(DIMINUTO_LDFLAGS)
+LDFLAGS				:=	$(LDARCH) -l$(PROJECT) $(LDLIBRARIES) $(DIMINUTO_LDFLAGS) $(QUANT_LDFLAGS)
 MOFLAGS				:=	$(MOARCH) -l$(PROJECT) $(LDLIBRARIES)
 SOFLAGS				:=	$(SOARCH) $(LDLIBRARIES)
 
