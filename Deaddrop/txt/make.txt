@@ -1,91 +1,264 @@
-Scanning dependencies of target picohttp-core
+/usr/bin/cmake -S/home/jsloan/src/quant -B/home/jsloan/src/quant/Debug --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/jsloan/src/quant/Debug/CMakeFiles /home/jsloan/src/quant/Debug/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory '/home/jsloan/src/quant/Debug'
+make -f lib/deps/picoquic/CMakeFiles/picohttp-core.dir/build.make lib/deps/picoquic/CMakeFiles/picohttp-core.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/lib/deps/picoquic /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/lib/deps/picoquic /home/jsloan/src/quant/Debug/lib/deps/picoquic/CMakeFiles/picohttp-core.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f lib/deps/picoquic/CMakeFiles/picohttp-core.dir/build.make lib/deps/picoquic/CMakeFiles/picohttp-core.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [  0%] Building C object lib/deps/picoquic/CMakeFiles/picohttp-core.dir/picohttp/democlient.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/picoquic && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/lib/deps/picoquic/picoquic -I/home/jsloan/src/quant/lib/deps/picoquic/picoquictest -I/home/jsloan/src/quant/lib/deps/picotls/include  -std=c99 -Wall -Werror -O2 -g -Wno-unused-but-set-variable -Wno-unused-variable  -DNDEBUG -Ofast -march=native -g3   -std=gnu11 -o CMakeFiles/picohttp-core.dir/picohttp/democlient.c.o   -c /home/jsloan/src/quant/lib/deps/picoquic/picohttp/democlient.c
 [  0%] Building C object lib/deps/picoquic/CMakeFiles/picohttp-core.dir/picohttp/demoserver.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/picoquic && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/lib/deps/picoquic/picoquic -I/home/jsloan/src/quant/lib/deps/picoquic/picoquictest -I/home/jsloan/src/quant/lib/deps/picotls/include  -std=c99 -Wall -Werror -O2 -g -Wno-unused-but-set-variable -Wno-unused-variable  -DNDEBUG -Ofast -march=native -g3   -std=gnu11 -o CMakeFiles/picohttp-core.dir/picohttp/demoserver.c.o   -c /home/jsloan/src/quant/lib/deps/picoquic/picohttp/demoserver.c
 [  5%] Building C object lib/deps/picoquic/CMakeFiles/picohttp-core.dir/picohttp/h3zero.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/picoquic && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/lib/deps/picoquic/picoquic -I/home/jsloan/src/quant/lib/deps/picoquic/picoquictest -I/home/jsloan/src/quant/lib/deps/picotls/include  -std=c99 -Wall -Werror -O2 -g -Wno-unused-but-set-variable -Wno-unused-variable  -DNDEBUG -Ofast -march=native -g3   -std=gnu11 -o CMakeFiles/picohttp-core.dir/picohttp/h3zero.c.o   -c /home/jsloan/src/quant/lib/deps/picoquic/picohttp/h3zero.c
 [  5%] Building C object lib/deps/picoquic/CMakeFiles/picohttp-core.dir/picohttp/quicperf.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/picoquic && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/lib/deps/picoquic/picoquic -I/home/jsloan/src/quant/lib/deps/picoquic/picoquictest -I/home/jsloan/src/quant/lib/deps/picotls/include  -std=c99 -Wall -Werror -O2 -g -Wno-unused-but-set-variable -Wno-unused-variable  -DNDEBUG -Ofast -march=native -g3   -std=gnu11 -o CMakeFiles/picohttp-core.dir/picohttp/quicperf.c.o   -c /home/jsloan/src/quant/lib/deps/picoquic/picohttp/quicperf.c
 [  5%] Building C object lib/deps/picoquic/CMakeFiles/picohttp-core.dir/picohttp/siduck.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/picoquic && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/lib/deps/picoquic/picoquic -I/home/jsloan/src/quant/lib/deps/picoquic/picoquictest -I/home/jsloan/src/quant/lib/deps/picotls/include  -std=c99 -Wall -Werror -O2 -g -Wno-unused-but-set-variable -Wno-unused-variable  -DNDEBUG -Ofast -march=native -g3   -std=gnu11 -o CMakeFiles/picohttp-core.dir/picohttp/siduck.c.o   -c /home/jsloan/src/quant/lib/deps/picoquic/picohttp/siduck.c
 [  5%] Linking C static library libpicohttp-core.a
+cd /home/jsloan/src/quant/Debug/lib/deps/picoquic && /usr/bin/cmake -P CMakeFiles/picohttp-core.dir/cmake_clean_target.cmake
+cd /home/jsloan/src/quant/Debug/lib/deps/picoquic && /usr/bin/cmake -E cmake_link_script CMakeFiles/picohttp-core.dir/link.txt --verbose=y
+/usr/bin/ar qc libpicohttp-core.a  CMakeFiles/picohttp-core.dir/picohttp/democlient.c.o CMakeFiles/picohttp-core.dir/picohttp/demoserver.c.o CMakeFiles/picohttp-core.dir/picohttp/h3zero.c.o CMakeFiles/picohttp-core.dir/picohttp/quicperf.c.o CMakeFiles/picohttp-core.dir/picohttp/siduck.c.o
+/usr/bin/ranlib libpicohttp-core.a
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [  5%] Built target picohttp-core
-Scanning dependencies of target picotls-core
+make -f lib/deps/picotls/CMakeFiles/picotls-core.dir/build.make lib/deps/picotls/CMakeFiles/picotls-core.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/lib/deps/picotls /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/lib/deps/picotls /home/jsloan/src/quant/Debug/lib/deps/picotls/CMakeFiles/picotls-core.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f lib/deps/picotls/CMakeFiles/picotls-core.dir/build.make lib/deps/picotls/CMakeFiles/picotls-core.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [  5%] Building C object lib/deps/picotls/CMakeFiles/picotls-core.dir/lib/picotls.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/picotls && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/lib/deps/picotls/deps/cifra/src/ext -I/home/jsloan/src/quant/lib/deps/picotls/deps/cifra/src -I/home/jsloan/src/quant/lib/deps/picotls/deps/micro-ecc -I/home/jsloan/src/quant/lib/deps/picotls/deps/picotest -I/home/jsloan/src/quant/lib/deps/picotls/include -I/home/jsloan/src/quant/Debug/lib/deps/picotls  -D_GNU_SOURCE -pthread -std=c99 -Wall -O2 -g -Wno-unused-but-set-variable -Wno-unused-variable  -DNDEBUG -Ofast -march=native -g3   -std=gnu11 -o CMakeFiles/picotls-core.dir/lib/picotls.c.o   -c /home/jsloan/src/quant/lib/deps/picotls/lib/picotls.c
 [ 11%] Building C object lib/deps/picotls/CMakeFiles/picotls-core.dir/lib/pembase64.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/picotls && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/lib/deps/picotls/deps/cifra/src/ext -I/home/jsloan/src/quant/lib/deps/picotls/deps/cifra/src -I/home/jsloan/src/quant/lib/deps/picotls/deps/micro-ecc -I/home/jsloan/src/quant/lib/deps/picotls/deps/picotest -I/home/jsloan/src/quant/lib/deps/picotls/include -I/home/jsloan/src/quant/Debug/lib/deps/picotls  -D_GNU_SOURCE -pthread -std=c99 -Wall -O2 -g -Wno-unused-but-set-variable -Wno-unused-variable  -DNDEBUG -Ofast -march=native -g3   -std=gnu11 -o CMakeFiles/picotls-core.dir/lib/pembase64.c.o   -c /home/jsloan/src/quant/lib/deps/picotls/lib/pembase64.c
 [ 11%] Linking C static library libpicotls-core.a
+cd /home/jsloan/src/quant/Debug/lib/deps/picotls && /usr/bin/cmake -P CMakeFiles/picotls-core.dir/cmake_clean_target.cmake
+cd /home/jsloan/src/quant/Debug/lib/deps/picotls && /usr/bin/cmake -E cmake_link_script CMakeFiles/picotls-core.dir/link.txt --verbose=y
+/usr/bin/ar qc libpicotls-core.a  CMakeFiles/picotls-core.dir/lib/picotls.c.o CMakeFiles/picotls-core.dir/lib/pembase64.c.o
+/usr/bin/ranlib libpicotls-core.a
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 11%] Built target picotls-core
-Scanning dependencies of target picotls-openssl
+make -f lib/deps/picotls/CMakeFiles/picotls-openssl.dir/build.make lib/deps/picotls/CMakeFiles/picotls-openssl.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/lib/deps/picotls /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/lib/deps/picotls /home/jsloan/src/quant/Debug/lib/deps/picotls/CMakeFiles/picotls-openssl.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f lib/deps/picotls/CMakeFiles/picotls-openssl.dir/build.make lib/deps/picotls/CMakeFiles/picotls-openssl.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 16%] Building C object lib/deps/picotls/CMakeFiles/picotls-openssl.dir/lib/openssl.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/picotls && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/lib/deps/picotls/deps/cifra/src/ext -I/home/jsloan/src/quant/lib/deps/picotls/deps/cifra/src -I/home/jsloan/src/quant/lib/deps/picotls/deps/micro-ecc -I/home/jsloan/src/quant/lib/deps/picotls/deps/picotest -I/home/jsloan/src/quant/lib/deps/picotls/include -I/home/jsloan/src/quant/Debug/lib/deps/picotls  -D_GNU_SOURCE -pthread -std=c99 -Wall -O2 -g -Wno-unused-but-set-variable -Wno-unused-variable  -DNDEBUG -Ofast -march=native -g3   -std=gnu11 -o CMakeFiles/picotls-openssl.dir/lib/openssl.c.o   -c /home/jsloan/src/quant/lib/deps/picotls/lib/openssl.c
 [ 16%] Linking C static library libpicotls-openssl.a
+cd /home/jsloan/src/quant/Debug/lib/deps/picotls && /usr/bin/cmake -P CMakeFiles/picotls-openssl.dir/cmake_clean_target.cmake
+cd /home/jsloan/src/quant/Debug/lib/deps/picotls && /usr/bin/cmake -E cmake_link_script CMakeFiles/picotls-openssl.dir/link.txt --verbose=y
+/usr/bin/ar qc libpicotls-openssl.a  CMakeFiles/picotls-openssl.dir/lib/openssl.c.o
+/usr/bin/ranlib libpicotls-openssl.a
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 16%] Built target picotls-openssl
-Scanning dependencies of target common
+make -f lib/CMakeFiles/common.dir/build.make lib/CMakeFiles/common.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/lib /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/lib /home/jsloan/src/quant/Debug/lib/CMakeFiles/common.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f lib/CMakeFiles/common.dir/build.make lib/CMakeFiles/common.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 16%] Building C object lib/CMakeFiles/common.dir/src/pkt.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/pkt.c.o   -c /home/jsloan/src/quant/lib/src/pkt.c
 [ 16%] Building C object lib/CMakeFiles/common.dir/src/frame.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/frame.c.o   -c /home/jsloan/src/quant/lib/src/frame.c
 [ 22%] Building C object lib/CMakeFiles/common.dir/src/quic.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/quic.c.o   -c /home/jsloan/src/quant/lib/src/quic.c
 [ 22%] Building C object lib/CMakeFiles/common.dir/src/stream.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/stream.c.o   -c /home/jsloan/src/quant/lib/src/stream.c
 [ 22%] Building C object lib/CMakeFiles/common.dir/src/conn.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/conn.c.o   -c /home/jsloan/src/quant/lib/src/conn.c
 [ 22%] Building C object lib/CMakeFiles/common.dir/src/pn.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/pn.c.o   -c /home/jsloan/src/quant/lib/src/pn.c
 [ 27%] Building C object lib/CMakeFiles/common.dir/src/qlog.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/qlog.c.o   -c /home/jsloan/src/quant/lib/src/qlog.c
 [ 27%] Building C object lib/CMakeFiles/common.dir/src/diet.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/diet.c.o   -c /home/jsloan/src/quant/lib/src/diet.c
 [ 27%] Building C object lib/CMakeFiles/common.dir/src/util.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/util.c.o   -c /home/jsloan/src/quant/lib/src/util.c
 [ 27%] Building C object lib/CMakeFiles/common.dir/src/tls.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/tls.c.o   -c /home/jsloan/src/quant/lib/src/tls.c
 [ 33%] Building C object lib/CMakeFiles/common.dir/src/recovery.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/recovery.c.o   -c /home/jsloan/src/quant/lib/src/recovery.c
 [ 33%] Building C object lib/CMakeFiles/common.dir/src/marshall.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/marshall.c.o   -c /home/jsloan/src/quant/lib/src/marshall.c
 [ 33%] Building C object lib/CMakeFiles/common.dir/src/loop.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/loop.c.o   -c /home/jsloan/src/quant/lib/src/loop.c
 [ 33%] Building C object lib/CMakeFiles/common.dir/src/cid.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   -std=gnu11 -o CMakeFiles/common.dir/src/cid.c.o   -c /home/jsloan/src/quant/lib/src/cid.c
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 33%] Built target common
-Scanning dependencies of target obj_all
+make -f lib/deps/warpcore/lib/CMakeFiles/obj_all.dir/build.make lib/deps/warpcore/lib/CMakeFiles/obj_all.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/lib/deps/warpcore/lib /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/CMakeFiles/obj_all.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f lib/deps/warpcore/lib/CMakeFiles/obj_all.dir/build.make lib/deps/warpcore/lib/CMakeFiles/obj_all.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 38%] Building C object lib/deps/warpcore/lib/CMakeFiles/obj_all.dir/src/plat.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -DNDEBUG -Ofast -march=native -g3 -fPIC   -std=gnu11 -o CMakeFiles/obj_all.dir/src/plat.c.o   -c /home/jsloan/src/quant/lib/deps/warpcore/lib/src/plat.c
 [ 38%] Building C object lib/deps/warpcore/lib/CMakeFiles/obj_all.dir/src/util.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -DNDEBUG -Ofast -march=native -g3 -fPIC   -std=gnu11 -o CMakeFiles/obj_all.dir/src/util.c.o   -c /home/jsloan/src/quant/lib/deps/warpcore/lib/src/util.c
 [ 38%] Building C object lib/deps/warpcore/lib/CMakeFiles/obj_all.dir/src/ifaddr.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -DNDEBUG -Ofast -march=native -g3 -fPIC   -std=gnu11 -o CMakeFiles/obj_all.dir/src/ifaddr.c.o   -c /home/jsloan/src/quant/lib/deps/warpcore/lib/src/ifaddr.c
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 38%] Built target obj_all
-Scanning dependencies of target obj_sock
+make -f lib/deps/warpcore/lib/CMakeFiles/obj_sock.dir/build.make lib/deps/warpcore/lib/CMakeFiles/obj_sock.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/lib/deps/warpcore/lib /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/CMakeFiles/obj_sock.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f lib/deps/warpcore/lib/CMakeFiles/obj_sock.dir/build.make lib/deps/warpcore/lib/CMakeFiles/obj_sock.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 44%] Building C object lib/deps/warpcore/lib/CMakeFiles/obj_sock.dir/src/backend_sock.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -DNDEBUG -Ofast -march=native -g3 -fPIC   -std=gnu11 -o CMakeFiles/obj_sock.dir/src/backend_sock.c.o   -c /home/jsloan/src/quant/lib/deps/warpcore/lib/src/backend_sock.c
 [ 44%] Building C object lib/deps/warpcore/lib/CMakeFiles/obj_sock.dir/src/warpcore.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -DNDEBUG -Ofast -march=native -g3 -fPIC   -std=gnu11 -o CMakeFiles/obj_sock.dir/src/warpcore.c.o   -c /home/jsloan/src/quant/lib/deps/warpcore/lib/src/warpcore.c
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 44%] Built target obj_sock
-Scanning dependencies of target sockcore
+make -f lib/deps/warpcore/lib/CMakeFiles/sockcore.dir/build.make lib/deps/warpcore/lib/CMakeFiles/sockcore.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/lib/deps/warpcore/lib /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/CMakeFiles/sockcore.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f lib/deps/warpcore/lib/CMakeFiles/sockcore.dir/build.make lib/deps/warpcore/lib/CMakeFiles/sockcore.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 44%] Building C object lib/deps/warpcore/lib/CMakeFiles/sockcore.dir/src/config.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -DNDEBUG -Ofast -march=native -g3 -fPIC   -std=gnu11 -o CMakeFiles/sockcore.dir/src/config.c.o   -c /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/src/config.c
 [ 50%] Linking C static library libsockcore.a
+cd /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib && /usr/bin/cmake -P CMakeFiles/sockcore.dir/cmake_clean_target.cmake
+cd /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib && /usr/bin/cmake -E cmake_link_script CMakeFiles/sockcore.dir/link.txt --verbose=y
+/usr/bin/ar qc libsockcore.a  CMakeFiles/sockcore.dir/src/config.c.o CMakeFiles/obj_all.dir/src/plat.c.o CMakeFiles/obj_all.dir/src/util.c.o CMakeFiles/obj_all.dir/src/ifaddr.c.o CMakeFiles/obj_sock.dir/src/backend_sock.c.o CMakeFiles/obj_sock.dir/src/warpcore.c.o
+/usr/bin/ranlib libsockcore.a
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 50%] Built target sockcore
-Scanning dependencies of target picotls-fusion
+make -f lib/deps/picotls/CMakeFiles/picotls-fusion.dir/build.make lib/deps/picotls/CMakeFiles/picotls-fusion.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/lib/deps/picotls /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/lib/deps/picotls /home/jsloan/src/quant/Debug/lib/deps/picotls/CMakeFiles/picotls-fusion.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f lib/deps/picotls/CMakeFiles/picotls-fusion.dir/build.make lib/deps/picotls/CMakeFiles/picotls-fusion.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 55%] Building C object lib/deps/picotls/CMakeFiles/picotls-fusion.dir/lib/fusion.c.o
+cd /home/jsloan/src/quant/Debug/lib/deps/picotls && /usr/bin/cc -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/lib/deps/picotls/deps/cifra/src/ext -I/home/jsloan/src/quant/lib/deps/picotls/deps/cifra/src -I/home/jsloan/src/quant/lib/deps/picotls/deps/micro-ecc -I/home/jsloan/src/quant/lib/deps/picotls/deps/picotest -I/home/jsloan/src/quant/lib/deps/picotls/include -I/home/jsloan/src/quant/Debug/lib/deps/picotls  -D_GNU_SOURCE -pthread -std=c99 -Wall -O2 -g -Wno-unused-but-set-variable -Wno-unused-variable  -DNDEBUG -Ofast -march=native -g3   -mavx2 -maes -mpclmul -std=gnu11 -o CMakeFiles/picotls-fusion.dir/lib/fusion.c.o   -c /home/jsloan/src/quant/lib/deps/picotls/lib/fusion.c
 [ 55%] Linking C static library libpicotls-fusion.a
+cd /home/jsloan/src/quant/Debug/lib/deps/picotls && /usr/bin/cmake -P CMakeFiles/picotls-fusion.dir/cmake_clean_target.cmake
+cd /home/jsloan/src/quant/Debug/lib/deps/picotls && /usr/bin/cmake -E cmake_link_script CMakeFiles/picotls-fusion.dir/link.txt --verbose=y
+/usr/bin/ar qc libpicotls-fusion.a  CMakeFiles/picotls-fusion.dir/lib/fusion.c.o
+/usr/bin/ranlib libpicotls-fusion.a
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 55%] Built target picotls-fusion
-Scanning dependencies of target libquant
+make -f lib/CMakeFiles/libquant.dir/build.make lib/CMakeFiles/libquant.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/lib /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/lib /home/jsloan/src/quant/Debug/lib/CMakeFiles/libquant.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f lib/CMakeFiles/libquant.dir/build.make lib/CMakeFiles/libquant.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 55%] Building C object lib/CMakeFiles/libquant.dir/src/config.c.o
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3 -fPIC   -std=gnu11 -o CMakeFiles/libquant.dir/src/config.c.o   -c /home/jsloan/src/quant/Debug/lib/src/config.c
 [ 55%] Linking C static library libquant.a
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cmake -P CMakeFiles/libquant.dir/cmake_clean_target.cmake
+cd /home/jsloan/src/quant/Debug/lib && /usr/bin/cmake -E cmake_link_script CMakeFiles/libquant.dir/link.txt --verbose=y
+/usr/bin/ar qc libquant.a  CMakeFiles/libquant.dir/src/config.c.o CMakeFiles/common.dir/src/pkt.c.o CMakeFiles/common.dir/src/frame.c.o CMakeFiles/common.dir/src/quic.c.o CMakeFiles/common.dir/src/stream.c.o CMakeFiles/common.dir/src/conn.c.o CMakeFiles/common.dir/src/pn.c.o CMakeFiles/common.dir/src/qlog.c.o CMakeFiles/common.dir/src/diet.c.o CMakeFiles/common.dir/src/util.c.o CMakeFiles/common.dir/src/tls.c.o CMakeFiles/common.dir/src/recovery.c.o CMakeFiles/common.dir/src/marshall.c.o CMakeFiles/common.dir/src/loop.c.o CMakeFiles/common.dir/src/cid.c.o
+/usr/bin/ranlib libquant.a
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 55%] Built target libquant
-Scanning dependencies of target server
+make -f bin/CMakeFiles/server.dir/build.make bin/CMakeFiles/server.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/bin /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/bin /home/jsloan/src/quant/Debug/bin/CMakeFiles/server.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f bin/CMakeFiles/server.dir/build.make bin/CMakeFiles/server.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 55%] Building C object bin/CMakeFiles/server.dir/server.c.o
+cd /home/jsloan/src/quant/Debug/bin && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/lib/deps/picoquic -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3 -fPIE   -std=gnu11 -o CMakeFiles/server.dir/server.c.o   -c /home/jsloan/src/quant/bin/server.c
 [ 55%] Linking C executable server
+cd /home/jsloan/src/quant/Debug/bin && /usr/bin/cmake -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=y
+/usr/bin/cc  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   CMakeFiles/server.dir/server.c.o  -o server   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib:::::::::::: ../lib/libquant.a /usr/lib/x86_64-linux-gnu/libhttp_parser.so ../lib/deps/picoquic/libpicohttp-core.a ../lib/deps/picotls/libpicotls-openssl.a /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so ../lib/deps/warpcore/lib/libsockcore.a -ldl -lm ../lib/deps/picotls/libpicotls-fusion.a ../lib/deps/picotls/libpicotls-core.a ../lib/deps/picotls/libpicotls-core.a ../lib/deps/picotls/libpicotls-openssl.a ../lib/deps/picotls/libpicotls-fusion.a /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 55%] Built target server
-Scanning dependencies of target client
+make -f bin/CMakeFiles/client.dir/build.make bin/CMakeFiles/client.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/bin /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/bin /home/jsloan/src/quant/Debug/bin/CMakeFiles/client.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f bin/CMakeFiles/client.dir/build.make bin/CMakeFiles/client.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 61%] Building C object bin/CMakeFiles/client.dir/client.c.o
+cd /home/jsloan/src/quant/Debug/bin && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/lib/deps/picoquic -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3 -fPIE   -std=gnu11 -o CMakeFiles/client.dir/client.c.o   -c /home/jsloan/src/quant/bin/client.c
 [ 61%] Linking C executable client
+cd /home/jsloan/src/quant/Debug/bin && /usr/bin/cmake -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=y
+/usr/bin/cc  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   CMakeFiles/client.dir/client.c.o  -o client   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib:::::::::::: ../lib/libquant.a /usr/lib/x86_64-linux-gnu/libhttp_parser.so ../lib/deps/picoquic/libpicohttp-core.a ../lib/deps/picotls/libpicotls-openssl.a /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so ../lib/deps/warpcore/lib/libsockcore.a -ldl -lm ../lib/deps/picotls/libpicotls-fusion.a ../lib/deps/picotls/libpicotls-core.a ../lib/deps/picotls/libpicotls-core.a ../lib/deps/picotls/libpicotls-openssl.a ../lib/deps/picotls/libpicotls-fusion.a /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 61%] Built target client
+make -f test/CMakeFiles/test_conn.dir/build.make test/CMakeFiles/test_conn.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 61%] Generating dummy.ca.crt, dummy.ca.key
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/openssl req -batch -newkey rsa:2048 -sha256 -keyout /home/jsloan/src/quant/Debug/test/dummy.ca.key -days 9365 -nodes -x509 -subj /O=quant\ dummy\ CA/ -out /home/jsloan/src/quant/Debug/test/dummy.ca.crt
 Generating a RSA private key
-...................+++++
-........................+++++
-writing new private key to '/home/jsloan/src/quant/Release/test/dummy.ca.key'
+...........................................+++++
+.................................+++++
+writing new private key to '/home/jsloan/src/quant/Debug/test/dummy.ca.key'
 -----
 [ 61%] Generating dummy.eckey
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/openssl ecparam -out /home/jsloan/src/quant/Debug/test/dummy.eckey -noout -name prime256v1 -genkey
 [ 61%] Generating dummy.key
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/openssl pkcs8 -topk8 -inform pem -in /home/jsloan/src/quant/Debug/test/dummy.eckey -nocrypt -out /home/jsloan/src/quant/Debug/test/dummy.key
 [ 66%] Generating dummy.csr
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/openssl req -batch -new -sha256 -key /home/jsloan/src/quant/Debug/test/dummy.key -subj / -addext subjectAltName\ =\ DNS:localhost -out /home/jsloan/src/quant/Debug/test/dummy.csr
 [ 66%] Generating dummy.crt
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/openssl x509 -req -sha256 -days 9365 -in /home/jsloan/src/quant/Debug/test/dummy.csr -out /home/jsloan/src/quant/Debug/test/dummy.crt -CA /home/jsloan/src/quant/Debug/test/dummy.ca.crt -CAkey /home/jsloan/src/quant/Debug/test/dummy.ca.key -CAcreateserial -extfile /home/jsloan/src/quant/test/dummy.cnf
 Signature ok
 subject=
 Getting CA Private Key
-Scanning dependencies of target test_conn
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/test /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/test /home/jsloan/src/quant/Debug/test/CMakeFiles/test_conn.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f test/CMakeFiles/test_conn.dir/build.make test/CMakeFiles/test_conn.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 66%] Building C object test/CMakeFiles/test_conn.dir/test_conn.c.o
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/external/include -isystem /home/jsloan/src/quant/lib/src -isystem /home/jsloan/src/quant/test/SYSTEM -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3 -fPIE   -std=gnu11 -o CMakeFiles/test_conn.dir/test_conn.c.o   -c /home/jsloan/src/quant/test/test_conn.c
 [ 66%] Linking C executable test_conn
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/cmake -E cmake_link_script CMakeFiles/test_conn.dir/link.txt --verbose=y
+/usr/bin/cc  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   CMakeFiles/test_conn.dir/test_conn.c.o  -o test_conn   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib ../lib/libquant.a ../lib/deps/picotls/libpicotls-openssl.a ../lib/deps/warpcore/lib/libsockcore.a -ldl -lm ../lib/deps/picotls/libpicotls-fusion.a ../lib/deps/picotls/libpicotls-core.a /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 66%] Built target test_conn
-Scanning dependencies of target test_diet
+make -f test/CMakeFiles/test_diet.dir/build.make test/CMakeFiles/test_diet.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/test /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/test /home/jsloan/src/quant/Debug/test/CMakeFiles/test_diet.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f test/CMakeFiles/test_diet.dir/build.make test/CMakeFiles/test_diet.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 66%] Building C object test/CMakeFiles/test_diet.dir/test_diet.c.o
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/external/include -isystem /home/jsloan/src/quant/lib/src -isystem /home/jsloan/src/quant/test/SYSTEM -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3 -fPIE   -std=gnu11 -o CMakeFiles/test_diet.dir/test_diet.c.o   -c /home/jsloan/src/quant/test/test_diet.c
 [ 66%] Linking C executable test_diet
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/cmake -E cmake_link_script CMakeFiles/test_diet.dir/link.txt --verbose=y
+/usr/bin/cc  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   CMakeFiles/test_diet.dir/test_diet.c.o  -o test_diet   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib ../lib/libquant.a ../lib/deps/picotls/libpicotls-openssl.a ../lib/deps/warpcore/lib/libsockcore.a -ldl -lm ../lib/deps/picotls/libpicotls-fusion.a ../lib/deps/picotls/libpicotls-core.a /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 77%] Built target test_diet
-Scanning dependencies of target test_hex2str
+make -f test/CMakeFiles/test_hex2str.dir/build.make test/CMakeFiles/test_hex2str.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/test /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/test /home/jsloan/src/quant/Debug/test/CMakeFiles/test_hex2str.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f test/CMakeFiles/test_hex2str.dir/build.make test/CMakeFiles/test_hex2str.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 83%] Building C object test/CMakeFiles/test_hex2str.dir/test_hex2str.c.o
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/external/include -isystem /home/jsloan/src/quant/lib/src -isystem /home/jsloan/src/quant/test/SYSTEM -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3 -fPIE   -std=gnu11 -o CMakeFiles/test_hex2str.dir/test_hex2str.c.o   -c /home/jsloan/src/quant/test/test_hex2str.c
 [ 83%] Linking C executable test_hex2str
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/cmake -E cmake_link_script CMakeFiles/test_hex2str.dir/link.txt --verbose=y
+/usr/bin/cc  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   CMakeFiles/test_hex2str.dir/test_hex2str.c.o  -o test_hex2str   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib ../lib/libquant.a ../lib/deps/picotls/libpicotls-openssl.a ../lib/deps/warpcore/lib/libsockcore.a -ldl -lm ../lib/deps/picotls/libpicotls-fusion.a ../lib/deps/picotls/libpicotls-core.a /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [ 88%] Built target test_hex2str
-Scanning dependencies of target test_mulhi64
+make -f test/CMakeFiles/test_mulhi64.dir/build.make test/CMakeFiles/test_mulhi64.dir/depend
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
+cd /home/jsloan/src/quant/Debug && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/jsloan/src/quant /home/jsloan/src/quant/test /home/jsloan/src/quant/Debug /home/jsloan/src/quant/Debug/test /home/jsloan/src/quant/Debug/test/CMakeFiles/test_mulhi64.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
+make -f test/CMakeFiles/test_mulhi64.dir/build.make test/CMakeFiles/test_mulhi64.dir/build
+make[2]: Entering directory '/home/jsloan/src/quant/Debug'
 [ 94%] Building C object test/CMakeFiles/test_mulhi64.dir/test_mulhi64.c.o
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/cc -DWITH_OPENSSL -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -I/home/jsloan/src/quant/Debug/lib/deps/warpcore/lib/include -isystem /home/jsloan/src/quant/Debug/external/include -isystem /home/jsloan/src/quant/lib/src -isystem /home/jsloan/src/quant/test/SYSTEM -isystem /home/jsloan/src/quant/lib/deps/picotls/include -isystem /home/jsloan/src/quant/lib/deps/timeout -isystem /home/jsloan/src/quant/lib/include -isystem /home/jsloan/src/quant/Debug/lib/include -isystem /home/jsloan/src/quant/lib/deps/warpcore/lib/include  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3 -fPIE   -std=gnu11 -o CMakeFiles/test_mulhi64.dir/test_mulhi64.c.o   -c /home/jsloan/src/quant/test/test_mulhi64.c
 [ 94%] Linking C executable test_mulhi64
+cd /home/jsloan/src/quant/Debug/test && /usr/bin/cmake -E cmake_link_script CMakeFiles/test_mulhi64.dir/link.txt --verbose=y
+/usr/bin/cc  -pipe -Wextra -Wpedantic -Werror -fdiagnostics-color=always -fstack-usage -Wno-disabled-macro-expansion -Wno-missing-field-initializers -Wno-extra-semi-stmt -Wno-macro-redefined -Wno-covered-switch-default -Wno-missing-braces -Wno-gnu-statement-expression -fsanitize=address,undefined,leak -Og -fno-omit-frame-pointer -fsanitize-address-use-after-scope -fno-optimize-sibling-calls -fno-common -fno-sanitize-recover=all -g3   CMakeFiles/test_mulhi64.dir/test_mulhi64.c.o  -o test_mulhi64   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib ../lib/libquant.a ../lib/deps/picotls/libpicotls-openssl.a ../lib/deps/warpcore/lib/libsockcore.a -ldl -lm ../lib/deps/picotls/libpicotls-fusion.a ../lib/deps/picotls/libpicotls-core.a /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+make[2]: Leaving directory '/home/jsloan/src/quant/Debug'
 [100%] Built target test_mulhi64
+make[1]: Leaving directory '/home/jsloan/src/quant/Debug'
+/usr/bin/cmake -E cmake_progress_start /home/jsloan/src/quant/Debug/CMakeFiles 0

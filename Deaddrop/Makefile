@@ -133,10 +133,24 @@ QUANT_SYMBOL	:=	$(shell echo $(QUANT_TITLE) | tr '[a-z]' '[A-Z]')
 
 QUANT_ROOT		:=	$(THERE)/$(QUANT_PROJECT)
 QUANT_BUILD		:=	$(QUANT_ROOT)/Debug
+QUANT_DEPS		:=	$(QUANT_BUILD)/lib/deps
 
-QUANT_CPPFLAGS	:=	-isystem $(QUANT_ROOT)/lib/include -isystem $(QUANT_ROOT)/lib/deps/picotls/include
+QUANT_CPPFLAGS	:=	\
+-isystem $(QUANT_ROOT)/lib/include \
+-isystem $(QUANT_BUILD)/lib/include \
+-isystem $(QUANT_ROOT)/lib/deps/picotls/include \
+-isystem $(QUANT_ROOT)/lib/deps/picoquic \
+-isystem $(QUANT_ROOT)/lib/deps/warpcore/lib/include \
+-isystem $(QUANT_BUILD)/lib/deps/warpcore/lib/include
 
-QUANT_LDFLAGS	:=	$(QUANT_BUILD)/lib/deps/picotls/libpicotls-core.a $(QUANT_BUILD)/lib/deps/picotls/libpicotls-openssl.a $(QUANT_BUILD)/lib/deps/picotls/libpicotls-fusion.a -lssl -lcrypto
+QUANT_LDFLAGS	:=	\
+$(QUANT_BUILD)/lib/libquant.a \
+$(QUANT_DEPS)/picoquic/libpicohttp-core.a \
+$(QUANT_DEPS)/picotls/libpicotls-core.a \
+$(QUANT_DEPS)/picotls/libpicotls-fusion.a \
+$(QUANT_DEPS)/picotls/libpicotls-openssl.a \
+$(QUANT_DEPS)/warpcore/lib/libsockcore.a \
+-lssl -lcrypto
 
 ########## Commands and Option Flags
 
@@ -153,11 +167,11 @@ STRIP				:=	$(CROSS_COMPILE)strip
 CDEFINES			:=
 
 ARFLAGS				:=	crsv
-CPPFLAGS			:=	$(CDEFINES) -iquote $(SRC_DIR) -iquote $(INC_DIR) -iquote $(OUT)/$(INC_DIR) $(DIMINUTO_CPPFLAGS) $(QUANT_CPPFLAGS) $(CPPARCH)
+CPPFLAGS			:=	$(CDEFINES) -iquote $(SRC_DIR) -iquote $(INC_DIR) -iquote $(OUT)/$(INC_DIR) $(QUANT_CPPFLAGS) $(DIMINUTO_CPPFLAGS) $(CPPARCH)
 CFLAGS				:=	$(CARCH) -g
 CPFLAGS				:=	-i
 MVFLAGS				:=	-i
-LDFLAGS				:=	$(LDARCH) -l$(PROJECT) $(LDLIBRARIES) $(DIMINUTO_LDFLAGS) $(QUANT_LDFLAGS)
+LDFLAGS				:=	$(LDARCH) -l$(PROJECT) $(LDLIBRARIES) $(QUANT_LDFLAGS) $(DIMINUTO_LDFLAGS)
 MOFLAGS				:=	$(MOARCH) -l$(PROJECT) $(LDLIBRARIES)
 SOFLAGS				:=	$(SOARCH) $(LDLIBRARIES)
 
