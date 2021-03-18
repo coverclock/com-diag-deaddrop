@@ -121,8 +121,14 @@ DIMINUTO_ROOT		:=	$(THERE)/com-diag-$(DIMINUTO_PROJECT)/$(DIMINUTO_TITLE)
 DIMINUTO_HEADERS	:=	$(DIMINUTO_ROOT)/$(INC_DIR)
 DIMINUTO_LIBRARIES	:=	$(DIMINUTO_ROOT)/$(OUT)/$(LIB_DIR)
 
-DIMINUTO_CPPFLAGS	:=	-iquote $(DIMINUTO_HEADERS)
-DIMINUTO_LDFLAGS	:=	-L$(DIMINUTO_LIBRARIES) -l$(DIMINUTO_PROJECT) -lpthread -lrt -ldl
+DIMINUTO_CPPFLAGS	:=	\
+	-iquote $(DIMINUTO_HEADERS)
+
+DIMINUTO_LDFLAGS	:=	\
+	-L$(DIMINUTO_LIBRARIES) -l$(DIMINUTO_PROJECT) \
+	-lpthread \
+	-lrt \
+	-ldl
 
 ########## Quant Configuration
 
@@ -136,21 +142,27 @@ QUANT_BUILD		:=	$(QUANT_ROOT)/Debug
 QUANT_DEPS		:=	$(QUANT_BUILD)/lib/deps
 
 QUANT_CPPFLAGS	:=	\
--isystem $(QUANT_ROOT)/lib/include \
--isystem $(QUANT_BUILD)/lib/include \
--isystem $(QUANT_ROOT)/lib/deps/picotls/include \
--isystem $(QUANT_ROOT)/lib/deps/picoquic \
--isystem $(QUANT_ROOT)/lib/deps/warpcore/lib/include \
--isystem $(QUANT_BUILD)/lib/deps/warpcore/lib/include
+	-std=gnu11 \
+	-fsanitize=address,undefined,leak \
+	-fno-sanitize-recover=all \
+	-isystem $(QUANT_BUILD)/lib/deps/warpcore/lib/include \
+	-isystem $(QUANT_ROOT)/lib/deps/picoquic \
+	-isystem $(QUANT_ROOT)/lib/include \
+	-isystem $(QUANT_BUILD)/lib/include \
+	-isystem $(QUANT_ROOT)/lib/deps/warpcore/lib/include \
 
 QUANT_LDFLAGS	:=	\
-$(QUANT_BUILD)/lib/libquant.a \
-$(QUANT_DEPS)/picoquic/libpicohttp-core.a \
-$(QUANT_DEPS)/picotls/libpicotls-core.a \
-$(QUANT_DEPS)/picotls/libpicotls-fusion.a \
-$(QUANT_DEPS)/picotls/libpicotls-openssl.a \
-$(QUANT_DEPS)/warpcore/lib/libsockcore.a \
--lssl -lcrypto
+	-fsanitize=address,undefined,leak \
+	-fno-sanitize-recover=all \
+	$(QUANT_BUILD)/lib/libquant.a \
+	$(QUANT_DEPS)/picoquic/libpicohttp-core.a \
+    -lhttp_parser \
+	$(QUANT_DEPS)/picotls/libpicotls-openssl.a \
+	$(QUANT_DEPS)/warpcore/lib/libsockcore.a \
+	$(QUANT_DEPS)/picotls/libpicotls-fusion.a \
+	$(QUANT_DEPS)/picotls/libpicotls-core.a \
+	-lssl \
+	-lcrypto
 
 ########## Commands and Option Flags
 
