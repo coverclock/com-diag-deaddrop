@@ -1,0 +1,112 @@
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for benchmark::Initialize
+-- Looking for benchmark::Initialize - not found
+-- Looking for ProfilerStart
+-- Looking for ProfilerStart - not found
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found suitable version "1.1.1f", minimum required is "1.1.0")  
+-- Performing Test _pipe
+-- Performing Test _pipe - Success
+-- Performing Test _Wextra
+-- Performing Test _Wextra - Success
+-- Performing Test _Wpedantic
+-- Performing Test _Wpedantic - Success
+-- Performing Test _Weverything
+-- Performing Test _Weverything - Failed
+-- Performing Test _Werror
+-- Performing Test _Werror - Success
+-- Performing Test _fcolor_diagnostics
+-- Performing Test _fcolor_diagnostics - Failed
+-- Performing Test _fdiagnostics_color_always
+-- Performing Test _fdiagnostics_color_always - Success
+-- Performing Test _fstack_usage
+-- Performing Test _fstack_usage - Success
+-- Performing Test _Wno_disabled_macro_expansion
+-- Performing Test _Wno_disabled_macro_expansion - Success
+-- Performing Test _Wno_missing_field_initializers
+-- Performing Test _Wno_missing_field_initializers - Success
+-- Performing Test _Wno_extra_semi_stmt
+-- Performing Test _Wno_extra_semi_stmt - Success
+-- Performing Test _Wno_macro_redefined
+-- Performing Test _Wno_macro_redefined - Success
+-- Performing Test _Wno_covered_switch_default
+-- Performing Test _Wno_covered_switch_default - Success
+-- Performing Test _Wno_missing_braces
+-- Performing Test _Wno_missing_braces - Success
+-- Performing Test _Wno_gnu_statement_expression
+-- Performing Test _Wno_gnu_statement_expression - Success
+-- Performing Test _fcomment_block_commands_dotfile
+-- Performing Test _fcomment_block_commands_dotfile - Failed
+-- Performing Test _Wno_c__98_compat
+-- Performing Test _Wno_c__98_compat - Success
+-- Performing Test _Wno_global_constructors
+-- Performing Test _Wno_global_constructors - Success
+-- Found http-parser: /usr/lib/x86_64-linux-gnu/libhttp_parser.so  
+-- Found Doxygen: /usr/bin/doxygen (found version "1.8.17") found components: doxygen missing components: dot
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+cat: .git/refs/heads/master: No such file or directory
+CMake Warning at lib/CMakeLists.txt:13 (message):
+  Could not determine git commit hash
+
+
+cat: .git/refs/heads/master: No such file or directory
+CMake Warning at lib/CMakeLists.txt:33 (message):
+  Could not determine abbreviated git commit hash
+
+
+-- Looking for backtrace
+-- Looking for backtrace - found
+-- Looking for epoll_create
+-- Looking for epoll_create - found
+-- Looking for kqueue
+-- Looking for kqueue - not found
+-- Looking for recvmmsg
+-- Looking for recvmmsg - found
+-- Looking for sendmmsg
+-- Looking for sendmmsg - found
+-- Looking for htobe64
+-- Looking for htobe64 - found
+-- Looking for htobe64
+-- Looking for htobe64 - not found
+-- Looking for net/netmap_user.h
+-- Looking for net/netmap_user.h - not found
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.6.3") 
+-- Detecting USDT support
+-- Detecting USDT support - not found
+-- Checking for module 'libbrotlidec'
+--   Package 'libbrotlidec', required by 'virtual:world', not found
+-- Checking for module 'libbrotlienc'
+--   Package 'libbrotlienc', required by 'virtual:world', not found
+--   Enabling OpenSSL support
+--  Enabling fusion support
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found PTLS: /home/jsloan/src/quant/Release/lib/deps/picotls/libpicotls-core.a  
+-- picotls/include: /home/jsloan/src/quant/lib/deps/picotls/include
+-- picotls libraries: /home/jsloan/src/quant/Release/lib/deps/picotls/libpicotls-core.a;/home/jsloan/src/quant/Release/lib/deps/picotls/libpicotls-openssl.a;/home/jsloan/src/quant/Release/lib/deps/picotls/libpicotls-fusion.a
+-- root: /usr
+-- OpenSSL_VERSION: 1.1.1f
+-- OpenSSL_INCLUDE_DIR: /usr/include
+-- OpenSSL_LIBRARIES: /usr/lib/x86_64-linux-gnu/libssl.so;/usr/lib/x86_64-linux-gnu/libcrypto.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jsloan/src/quant/Release

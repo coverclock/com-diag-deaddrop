@@ -1,0 +1,91 @@
+Scanning dependencies of target picohttp-core
+[  0%] Building C object lib/deps/picoquic/CMakeFiles/picohttp-core.dir/picohttp/democlient.c.o
+[  0%] Building C object lib/deps/picoquic/CMakeFiles/picohttp-core.dir/picohttp/demoserver.c.o
+[  5%] Building C object lib/deps/picoquic/CMakeFiles/picohttp-core.dir/picohttp/h3zero.c.o
+[  5%] Building C object lib/deps/picoquic/CMakeFiles/picohttp-core.dir/picohttp/quicperf.c.o
+[  5%] Building C object lib/deps/picoquic/CMakeFiles/picohttp-core.dir/picohttp/siduck.c.o
+[  5%] Linking C static library libpicohttp-core.a
+[  5%] Built target picohttp-core
+Scanning dependencies of target picotls-core
+[  5%] Building C object lib/deps/picotls/CMakeFiles/picotls-core.dir/lib/picotls.c.o
+[ 11%] Building C object lib/deps/picotls/CMakeFiles/picotls-core.dir/lib/pembase64.c.o
+[ 11%] Linking C static library libpicotls-core.a
+[ 11%] Built target picotls-core
+Scanning dependencies of target picotls-openssl
+[ 16%] Building C object lib/deps/picotls/CMakeFiles/picotls-openssl.dir/lib/openssl.c.o
+[ 16%] Linking C static library libpicotls-openssl.a
+[ 16%] Built target picotls-openssl
+Scanning dependencies of target common
+[ 16%] Building C object lib/CMakeFiles/common.dir/src/pkt.c.o
+[ 16%] Building C object lib/CMakeFiles/common.dir/src/frame.c.o
+[ 22%] Building C object lib/CMakeFiles/common.dir/src/quic.c.o
+[ 22%] Building C object lib/CMakeFiles/common.dir/src/stream.c.o
+[ 22%] Building C object lib/CMakeFiles/common.dir/src/conn.c.o
+[ 22%] Building C object lib/CMakeFiles/common.dir/src/pn.c.o
+[ 27%] Building C object lib/CMakeFiles/common.dir/src/qlog.c.o
+[ 27%] Building C object lib/CMakeFiles/common.dir/src/diet.c.o
+[ 27%] Building C object lib/CMakeFiles/common.dir/src/util.c.o
+[ 27%] Building C object lib/CMakeFiles/common.dir/src/tls.c.o
+[ 33%] Building C object lib/CMakeFiles/common.dir/src/recovery.c.o
+[ 33%] Building C object lib/CMakeFiles/common.dir/src/marshall.c.o
+[ 33%] Building C object lib/CMakeFiles/common.dir/src/loop.c.o
+[ 33%] Building C object lib/CMakeFiles/common.dir/src/cid.c.o
+[ 33%] Built target common
+Scanning dependencies of target obj_all
+[ 38%] Building C object lib/deps/warpcore/lib/CMakeFiles/obj_all.dir/src/plat.c.o
+[ 38%] Building C object lib/deps/warpcore/lib/CMakeFiles/obj_all.dir/src/util.c.o
+[ 38%] Building C object lib/deps/warpcore/lib/CMakeFiles/obj_all.dir/src/ifaddr.c.o
+[ 38%] Built target obj_all
+Scanning dependencies of target obj_sock
+[ 44%] Building C object lib/deps/warpcore/lib/CMakeFiles/obj_sock.dir/src/backend_sock.c.o
+[ 44%] Building C object lib/deps/warpcore/lib/CMakeFiles/obj_sock.dir/src/warpcore.c.o
+[ 44%] Built target obj_sock
+Scanning dependencies of target sockcore
+[ 44%] Building C object lib/deps/warpcore/lib/CMakeFiles/sockcore.dir/src/config.c.o
+[ 50%] Linking C static library libsockcore.a
+[ 50%] Built target sockcore
+Scanning dependencies of target picotls-fusion
+[ 55%] Building C object lib/deps/picotls/CMakeFiles/picotls-fusion.dir/lib/fusion.c.o
+[ 55%] Linking C static library libpicotls-fusion.a
+[ 55%] Built target picotls-fusion
+Scanning dependencies of target libquant
+[ 55%] Building C object lib/CMakeFiles/libquant.dir/src/config.c.o
+[ 55%] Linking C static library libquant.a
+[ 55%] Built target libquant
+Scanning dependencies of target server
+[ 55%] Building C object bin/CMakeFiles/server.dir/server.c.o
+[ 55%] Linking C executable server
+[ 55%] Built target server
+Scanning dependencies of target client
+[ 61%] Building C object bin/CMakeFiles/client.dir/client.c.o
+[ 61%] Linking C executable client
+[ 61%] Built target client
+[ 61%] Generating dummy.ca.crt, dummy.ca.key
+Generating a RSA private key
+...................+++++
+........................+++++
+writing new private key to '/home/jsloan/src/quant/Release/test/dummy.ca.key'
+-----
+[ 61%] Generating dummy.eckey
+[ 61%] Generating dummy.key
+[ 66%] Generating dummy.csr
+[ 66%] Generating dummy.crt
+Signature ok
+subject=
+Getting CA Private Key
+Scanning dependencies of target test_conn
+[ 66%] Building C object test/CMakeFiles/test_conn.dir/test_conn.c.o
+[ 66%] Linking C executable test_conn
+[ 66%] Built target test_conn
+Scanning dependencies of target test_diet
+[ 66%] Building C object test/CMakeFiles/test_diet.dir/test_diet.c.o
+[ 66%] Linking C executable test_diet
+[ 77%] Built target test_diet
+Scanning dependencies of target test_hex2str
+[ 83%] Building C object test/CMakeFiles/test_hex2str.dir/test_hex2str.c.o
+[ 83%] Linking C executable test_hex2str
+[ 88%] Built target test_hex2str
+Scanning dependencies of target test_mulhi64
+[ 94%] Building C object test/CMakeFiles/test_mulhi64.dir/test_mulhi64.c.o
+[ 94%] Linking C executable test_mulhi64
+[100%] Built target test_mulhi64
