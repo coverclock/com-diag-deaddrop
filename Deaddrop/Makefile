@@ -131,12 +131,12 @@ QUANT_TITLE		:=	Quant
 QUANT_PROJECT	:=	$(shell echo $(QUANT_TITLE) | tr '[A-Z]' '[a-z]')
 QUANT_SYMBOL	:=	$(shell echo $(QUANT_TITLE) | tr '[a-z]' '[A-Z]')
 
-QUANT_ROOT		:=	$(THERE)/quant
-QUANT_HEADERS	:=	$(QUANT_ROOT)/lib/include#/quant
-QUANT_LIBRARIES	:=	$(QUANT_ROOT)/Debug/lib
+QUANT_ROOT		:=	$(THERE)/$(QUANT_PROJECT)
+QUANT_BUILD		:=	$(QUANT_ROOT)/Debug
 
-QUANT_CPPFLAGS	:=	-iquote $(QUANT_HEADERS)
-QUANT_LDFLAGS	:=	-L$(QUANT_LIBRARIES) -l$(QUANT_PROJECT)
+QUANT_CPPFLAGS	:=	-isystem $(QUANT_ROOT)/lib/include -isystem $(QUANT_ROOT)/lib/deps/picotls/include
+
+QUANT_LDFLAGS	:=	$(QUANT_BUILD)/lib/deps/picotls/libpicotls-core.a $(QUANT_BUILD)/lib/deps/picotls/libpicotls-openssl.a $(QUANT_BUILD)/lib/deps/picotls/libpicotls-fusion.a -lssl -lcrypto
 
 ########## Commands and Option Flags
 
